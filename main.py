@@ -14,11 +14,21 @@ def main():
         
         with st.spinner("Processing..."):
             response = route_customer_query(message)
-        
-        if "error" in response:
-            st.error(response["error"])
+
+        # 🔍 DEBUG: Print full API response to your console
+        print("🔵 Full Langflow Response:", response)
+
+        # ✅ Check if the response contains 'outputs'
+        if "outputs" in response and isinstance(response["outputs"], list) and len(response["outputs"]) > 0:
+            try:
+                # Attempt to extract the text from the nested structure
+                response_text = response["outputs"][0]["outputs"][0]["results"]["message"]["text"]
+            except (KeyError, IndexError, TypeError):
+                response_text = "⚠ Unexpected response format from Langflow."
         else:
-            st.markdown(response["response"])
+            response_text = "⚠ No response received from Langflow."
+
+        st.markdown(response_text)
 
 if __name__ == "__main__":
     main()

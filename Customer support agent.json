@@ -800,7 +800,7 @@
                 "_input_type": "DropdownInput"
               },
               "api_key": {
-                "load_from_db": true,
+                "load_from_db": false,
                 "required": false,
                 "placeholder": "",
                 "show": true,
@@ -1923,7 +1923,7 @@
                 "_input_type": "DropdownInput"
               },
               "token": {
-                "load_from_db": true,
+                "load_from_db": false,
                 "required": true,
                 "placeholder": "",
                 "show": true,
@@ -3026,7 +3026,7 @@
                 "_input_type": "DropdownInput"
               },
               "token": {
-                "load_from_db": true,
+                "load_from_db": false,
                 "required": true,
                 "placeholder": "",
                 "show": true,
@@ -3272,7 +3272,7 @@
                 "_input_type": "DropdownInput"
               },
               "api_key": {
-                "load_from_db": true,
+                "load_from_db": false,
                 "required": false,
                 "placeholder": "",
                 "show": true,
@@ -3883,7 +3883,7 @@
                 "_input_type": "DropdownInput"
               },
               "api_key": {
-                "load_from_db": true,
+                "load_from_db": false,
                 "required": false,
                 "placeholder": "",
                 "show": true,
@@ -4488,7 +4488,7 @@
                 "_input_type": "DictInput"
               },
               "token": {
-                "load_from_db": true,
+                "load_from_db": false,
                 "required": true,
                 "placeholder": "",
                 "show": true,
@@ -4771,7 +4771,7 @@
                 "_input_type": "DictInput"
               },
               "token": {
-                "load_from_db": true,
+                "load_from_db": false,
                 "required": true,
                 "placeholder": "",
                 "show": true,
@@ -4923,9 +4923,9 @@
     "edges": [
       {
         "source": "ChatInput-49JWE",
-        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-49JWEœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153ChatInput\u0153,\u0153id\u0153:\u0153ChatInput-49JWE\u0153,\u0153name\u0153:\u0153message\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
         "target": "Agent-FKniU",
-        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œAgent-FKniUœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153input_value\u0153,\u0153id\u0153:\u0153Agent-FKniU\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "data": {
           "targetHandle": {
             "fieldName": "input_value",
@@ -4944,16 +4944,16 @@
             ]
           }
         },
-        "id": "reactflow__edge-ChatInput-49JWE{œdataTypeœ:œChatInputœ,œidœ:œChatInput-49JWEœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-Agent-FKniU{œfieldNameœ:œinput_valueœ,œidœ:œAgent-FKniUœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ChatInput-49JWE{\u0153dataType\u0153:\u0153ChatInput\u0153,\u0153id\u0153:\u0153ChatInput-49JWE\u0153,\u0153name\u0153:\u0153message\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-FKniU{\u0153fieldName\u0153:\u0153input_value\u0153,\u0153id\u0153:\u0153Agent-FKniU\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "className": "",
         "animated": false,
         "selected": false
       },
       {
         "source": "Prompt-i2BZR",
-        "sourceHandle": "{œdataTypeœ:œPromptœ,œidœ:œPrompt-i2BZRœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Prompt\u0153,\u0153id\u0153:\u0153Prompt-i2BZR\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
         "target": "Agent-FKniU",
-        "targetHandle": "{œfieldNameœ:œsystem_promptœ,œidœ:œAgent-FKniUœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-FKniU\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "data": {
           "targetHandle": {
             "fieldName": "system_prompt",
@@ -4972,16 +4972,16 @@
             ]
           }
         },
-        "id": "reactflow__edge-Prompt-i2BZR{œdataTypeœ:œPromptœ,œidœ:œPrompt-i2BZRœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-Agent-FKniU{œfieldNameœ:œsystem_promptœ,œidœ:œAgent-FKniUœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-Prompt-i2BZR{\u0153dataType\u0153:\u0153Prompt\u0153,\u0153id\u0153:\u0153Prompt-i2BZR\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-FKniU{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-FKniU\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "className": "",
         "animated": false,
         "selected": false
       },
       {
         "source": "ChatInput-49JWE",
-        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-49JWEœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153ChatInput\u0153,\u0153id\u0153:\u0153ChatInput-49JWE\u0153,\u0153name\u0153:\u0153message\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
         "target": "Prompt-i2BZR",
-        "targetHandle": "{œfieldNameœ:œquestionœ,œidœ:œPrompt-i2BZRœ,œinputTypesœ:[œMessageœ,œTextœ],œtypeœ:œstrœ}",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153question\u0153,\u0153id\u0153:\u0153Prompt-i2BZR\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153,\u0153Text\u0153],\u0153type\u0153:\u0153str\u0153}",
         "data": {
           "targetHandle": {
             "fieldName": "question",
@@ -5001,16 +5001,16 @@
             ]
           }
         },
-        "id": "reactflow__edge-ChatInput-49JWE{œdataTypeœ:œChatInputœ,œidœ:œChatInput-49JWEœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-Prompt-i2BZR{œfieldNameœ:œquestionœ,œidœ:œPrompt-i2BZRœ,œinputTypesœ:[œMessageœ,œTextœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ChatInput-49JWE{\u0153dataType\u0153:\u0153ChatInput\u0153,\u0153id\u0153:\u0153ChatInput-49JWE\u0153,\u0153name\u0153:\u0153message\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Prompt-i2BZR{\u0153fieldName\u0153:\u0153question\u0153,\u0153id\u0153:\u0153Prompt-i2BZR\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153,\u0153Text\u0153],\u0153type\u0153:\u0153str\u0153}",
         "className": "",
         "animated": false,
         "selected": false
       },
       {
         "source": "ChatInput-49JWE",
-        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-49JWEœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153ChatInput\u0153,\u0153id\u0153:\u0153ChatInput-49JWE\u0153,\u0153name\u0153:\u0153message\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
         "target": "AstraDB-pdR0L",
-        "targetHandle": "{œfieldNameœ:œsearch_inputœ,œidœ:œAstraDB-pdR0Lœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153search_input\u0153,\u0153id\u0153:\u0153AstraDB-pdR0L\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "data": {
           "targetHandle": {
             "fieldName": "search_input",
@@ -5029,16 +5029,16 @@
             ]
           }
         },
-        "id": "reactflow__edge-ChatInput-49JWE{œdataTypeœ:œChatInputœ,œidœ:œChatInput-49JWEœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-AstraDB-pdR0L{œfieldNameœ:œsearch_inputœ,œidœ:œAstraDB-pdR0Lœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ChatInput-49JWE{\u0153dataType\u0153:\u0153ChatInput\u0153,\u0153id\u0153:\u0153ChatInput-49JWE\u0153,\u0153name\u0153:\u0153message\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-AstraDB-pdR0L{\u0153fieldName\u0153:\u0153search_input\u0153,\u0153id\u0153:\u0153AstraDB-pdR0L\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "animated": false,
         "className": "",
         "selected": false
       },
       {
         "source": "AstraDB-pdR0L",
-        "sourceHandle": "{œdataTypeœ:œAstraDBœ,œidœ:œAstraDB-pdR0Lœ,œnameœ:œsearch_resultsœ,œoutput_typesœ:[œDataœ]}",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153AstraDB\u0153,\u0153id\u0153:\u0153AstraDB-pdR0L\u0153,\u0153name\u0153:\u0153search_results\u0153,\u0153output_types\u0153:[\u0153Data\u0153]}",
         "target": "ParseData-vOQYo",
-        "targetHandle": "{œfieldNameœ:œdataœ,œidœ:œParseData-vOQYoœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153data\u0153,\u0153id\u0153:\u0153ParseData-vOQYo\u0153,\u0153inputTypes\u0153:[\u0153Data\u0153],\u0153type\u0153:\u0153other\u0153}",
         "data": {
           "targetHandle": {
             "fieldName": "data",
@@ -5057,16 +5057,16 @@
             ]
           }
         },
-        "id": "reactflow__edge-AstraDB-pdR0L{œdataTypeœ:œAstraDBœ,œidœ:œAstraDB-pdR0Lœ,œnameœ:œsearch_resultsœ,œoutput_typesœ:[œDataœ]}-ParseData-vOQYo{œfieldNameœ:œdataœ,œidœ:œParseData-vOQYoœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-AstraDB-pdR0L{\u0153dataType\u0153:\u0153AstraDB\u0153,\u0153id\u0153:\u0153AstraDB-pdR0L\u0153,\u0153name\u0153:\u0153search_results\u0153,\u0153output_types\u0153:[\u0153Data\u0153]}-ParseData-vOQYo{\u0153fieldName\u0153:\u0153data\u0153,\u0153id\u0153:\u0153ParseData-vOQYo\u0153,\u0153inputTypes\u0153:[\u0153Data\u0153],\u0153type\u0153:\u0153other\u0153}",
         "animated": false,
         "className": "",
         "selected": false
       },
       {
         "source": "ParseData-vOQYo",
-        "sourceHandle": "{œdataTypeœ:œParseDataœ,œidœ:œParseData-vOQYoœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153ParseData\u0153,\u0153id\u0153:\u0153ParseData-vOQYo\u0153,\u0153name\u0153:\u0153text\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
         "target": "Prompt-i2BZR",
-        "targetHandle": "{œfieldNameœ:œresultsœ,œidœ:œPrompt-i2BZRœ,œinputTypesœ:[œMessageœ,œTextœ],œtypeœ:œstrœ}",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153results\u0153,\u0153id\u0153:\u0153Prompt-i2BZR\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153,\u0153Text\u0153],\u0153type\u0153:\u0153str\u0153}",
         "data": {
           "targetHandle": {
             "fieldName": "results",
@@ -5086,16 +5086,16 @@
             ]
           }
         },
-        "id": "reactflow__edge-ParseData-vOQYo{œdataTypeœ:œParseDataœ,œidœ:œParseData-vOQYoœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}-Prompt-i2BZR{œfieldNameœ:œresultsœ,œidœ:œPrompt-i2BZRœ,œinputTypesœ:[œMessageœ,œTextœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ParseData-vOQYo{\u0153dataType\u0153:\u0153ParseData\u0153,\u0153id\u0153:\u0153ParseData-vOQYo\u0153,\u0153name\u0153:\u0153text\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Prompt-i2BZR{\u0153fieldName\u0153:\u0153results\u0153,\u0153id\u0153:\u0153Prompt-i2BZR\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153,\u0153Text\u0153],\u0153type\u0153:\u0153str\u0153}",
         "animated": false,
         "className": "",
         "selected": false
       },
       {
         "source": "File-WDGQE",
-        "sourceHandle": "{œdataTypeœ:œFileœ,œidœ:œFile-WDGQEœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153File\u0153,\u0153id\u0153:\u0153File-WDGQE\u0153,\u0153name\u0153:\u0153data\u0153,\u0153output_types\u0153:[\u0153Data\u0153]}",
         "target": "SplitText-G57ix",
-        "targetHandle": "{œfieldNameœ:œdata_inputsœ,œidœ:œSplitText-G57ixœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153data_inputs\u0153,\u0153id\u0153:\u0153SplitText-G57ix\u0153,\u0153inputTypes\u0153:[\u0153Data\u0153],\u0153type\u0153:\u0153other\u0153}",
         "data": {
           "targetHandle": {
             "fieldName": "data_inputs",
@@ -5114,16 +5114,16 @@
             ]
           }
         },
-        "id": "reactflow__edge-File-WDGQE{œdataTypeœ:œFileœ,œidœ:œFile-WDGQEœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}-SplitText-G57ix{œfieldNameœ:œdata_inputsœ,œidœ:œSplitText-G57ixœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-File-WDGQE{\u0153dataType\u0153:\u0153File\u0153,\u0153id\u0153:\u0153File-WDGQE\u0153,\u0153name\u0153:\u0153data\u0153,\u0153output_types\u0153:[\u0153Data\u0153]}-SplitText-G57ix{\u0153fieldName\u0153:\u0153data_inputs\u0153,\u0153id\u0153:\u0153SplitText-G57ix\u0153,\u0153inputTypes\u0153:[\u0153Data\u0153],\u0153type\u0153:\u0153other\u0153}",
         "animated": false,
         "className": "",
         "selected": false
       },
       {
         "source": "SplitText-G57ix",
-        "sourceHandle": "{œdataTypeœ:œSplitTextœ,œidœ:œSplitText-G57ixœ,œnameœ:œchunksœ,œoutput_typesœ:[œDataœ]}",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153SplitText\u0153,\u0153id\u0153:\u0153SplitText-G57ix\u0153,\u0153name\u0153:\u0153chunks\u0153,\u0153output_types\u0153:[\u0153Data\u0153]}",
         "target": "AstraDB-6jGDK",
-        "targetHandle": "{œfieldNameœ:œingest_dataœ,œidœ:œAstraDB-6jGDKœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153ingest_data\u0153,\u0153id\u0153:\u0153AstraDB-6jGDK\u0153,\u0153inputTypes\u0153:[\u0153Data\u0153],\u0153type\u0153:\u0153other\u0153}",
         "data": {
           "targetHandle": {
             "fieldName": "ingest_data",
@@ -5142,16 +5142,16 @@
             ]
           }
         },
-        "id": "reactflow__edge-SplitText-G57ix{œdataTypeœ:œSplitTextœ,œidœ:œSplitText-G57ixœ,œnameœ:œchunksœ,œoutput_typesœ:[œDataœ]}-AstraDB-6jGDK{œfieldNameœ:œingest_dataœ,œidœ:œAstraDB-6jGDKœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-SplitText-G57ix{\u0153dataType\u0153:\u0153SplitText\u0153,\u0153id\u0153:\u0153SplitText-G57ix\u0153,\u0153name\u0153:\u0153chunks\u0153,\u0153output_types\u0153:[\u0153Data\u0153]}-AstraDB-6jGDK{\u0153fieldName\u0153:\u0153ingest_data\u0153,\u0153id\u0153:\u0153AstraDB-6jGDK\u0153,\u0153inputTypes\u0153:[\u0153Data\u0153],\u0153type\u0153:\u0153other\u0153}",
         "animated": false,
         "className": "",
         "selected": false
       },
       {
         "source": "ChatInput-49JWE",
-        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-49JWEœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153ChatInput\u0153,\u0153id\u0153:\u0153ChatInput-49JWE\u0153,\u0153name\u0153:\u0153message\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
         "target": "Agent-niM4e",
-        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œAgent-niM4eœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153input_value\u0153,\u0153id\u0153:\u0153Agent-niM4e\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "data": {
           "targetHandle": {
             "fieldName": "input_value",
@@ -5170,16 +5170,16 @@
             ]
           }
         },
-        "id": "reactflow__edge-ChatInput-49JWE{œdataTypeœ:œChatInputœ,œidœ:œChatInput-49JWEœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-Agent-niM4e{œfieldNameœ:œinput_valueœ,œidœ:œAgent-niM4eœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-ChatInput-49JWE{\u0153dataType\u0153:\u0153ChatInput\u0153,\u0153id\u0153:\u0153ChatInput-49JWE\u0153,\u0153name\u0153:\u0153message\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-niM4e{\u0153fieldName\u0153:\u0153input_value\u0153,\u0153id\u0153:\u0153Agent-niM4e\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "className": "",
         "animated": false,
         "selected": false
       },
       {
         "source": "Agent-FKniU",
-        "sourceHandle": "{œdataTypeœ:œAgentœ,œidœ:œAgent-FKniUœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-FKniU\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
         "target": "Agent-niM4e",
-        "targetHandle": "{œfieldNameœ:œtoolsœ,œidœ:œAgent-niM4eœ,œinputTypesœ:[œToolœ,œBaseToolœ,œStructuredToolœ],œtypeœ:œotherœ}",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-niM4e\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153,\u0153BaseTool\u0153,\u0153StructuredTool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "data": {
           "targetHandle": {
             "fieldName": "tools",
@@ -5200,16 +5200,16 @@
             ]
           }
         },
-        "id": "reactflow__edge-Agent-FKniU{œdataTypeœ:œAgentœ,œidœ:œAgent-FKniUœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}-Agent-niM4e{œfieldNameœ:œtoolsœ,œidœ:œAgent-niM4eœ,œinputTypesœ:[œToolœ,œBaseToolœ,œStructuredToolœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-Agent-FKniU{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-FKniU\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-niM4e{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-niM4e\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153,\u0153BaseTool\u0153,\u0153StructuredTool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "className": "",
         "animated": false,
         "selected": false
       },
       {
         "source": "Agent-niM4e",
-        "sourceHandle": "{œdataTypeœ:œAgentœ,œidœ:œAgent-niM4eœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-niM4e\u0153,\u0153name\u0153:\u0153response\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
         "target": "ChatOutput-4liAi",
-        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-4liAiœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153input_value\u0153,\u0153id\u0153:\u0153ChatOutput-4liAi\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "data": {
           "targetHandle": {
             "fieldName": "input_value",
@@ -5228,16 +5228,16 @@
             ]
           }
         },
-        "id": "reactflow__edge-Agent-niM4e{œdataTypeœ:œAgentœ,œidœ:œAgent-niM4eœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}-ChatOutput-4liAi{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-4liAiœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "reactflow__edge-Agent-niM4e{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-niM4e\u0153,\u0153name\u0153:\u0153response\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-ChatOutput-4liAi{\u0153fieldName\u0153:\u0153input_value\u0153,\u0153id\u0153:\u0153ChatOutput-4liAi\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "className": "",
         "animated": false,
         "selected": false
       },
       {
         "source": "Agent-eWsck",
-        "sourceHandle": "{œdataTypeœ:œAgentœ,œidœ:œAgent-eWsckœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-eWsck\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
         "target": "Agent-niM4e",
-        "targetHandle": "{œfieldNameœ:œtoolsœ,œidœ:œAgent-niM4eœ,œinputTypesœ:[œToolœ,œBaseToolœ,œStructuredToolœ],œtypeœ:œotherœ}",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-niM4e\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153,\u0153BaseTool\u0153,\u0153StructuredTool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "data": {
           "targetHandle": {
             "fieldName": "tools",
@@ -5258,16 +5258,16 @@
             ]
           }
         },
-        "id": "reactflow__edge-Agent-eWsck{œdataTypeœ:œAgentœ,œidœ:œAgent-eWsckœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}-Agent-niM4e{œfieldNameœ:œtoolsœ,œidœ:œAgent-niM4eœ,œinputTypesœ:[œToolœ,œBaseToolœ,œStructuredToolœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-Agent-eWsck{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-eWsck\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-niM4e{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-niM4e\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153,\u0153BaseTool\u0153,\u0153StructuredTool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "animated": false,
         "className": "",
         "selected": false
       },
       {
         "source": "AstraDBToolComponent-X7ML0",
-        "sourceHandle": "{œdataTypeœ:œAstraDBToolComponentœ,œidœ:œAstraDBToolComponent-X7ML0œ,œnameœ:œapi_build_toolœ,œoutput_typesœ:[œStructuredToolœ]}",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153AstraDBToolComponent\u0153,\u0153id\u0153:\u0153AstraDBToolComponent-X7ML0\u0153,\u0153name\u0153:\u0153api_build_tool\u0153,\u0153output_types\u0153:[\u0153StructuredTool\u0153]}",
         "target": "Agent-eWsck",
-        "targetHandle": "{œfieldNameœ:œtoolsœ,œidœ:œAgent-eWsckœ,œinputTypesœ:[œToolœ,œBaseToolœ,œStructuredToolœ],œtypeœ:œotherœ}",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-eWsck\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153,\u0153BaseTool\u0153,\u0153StructuredTool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "data": {
           "targetHandle": {
             "fieldName": "tools",
@@ -5288,16 +5288,16 @@
             ]
           }
         },
-        "id": "reactflow__edge-AstraDBToolComponent-X7ML0{œdataTypeœ:œAstraDBToolComponentœ,œidœ:œAstraDBToolComponent-X7ML0œ,œnameœ:œapi_build_toolœ,œoutput_typesœ:[œStructuredToolœ]}-Agent-eWsck{œfieldNameœ:œtoolsœ,œidœ:œAgent-eWsckœ,œinputTypesœ:[œToolœ,œBaseToolœ,œStructuredToolœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-AstraDBToolComponent-X7ML0{\u0153dataType\u0153:\u0153AstraDBToolComponent\u0153,\u0153id\u0153:\u0153AstraDBToolComponent-X7ML0\u0153,\u0153name\u0153:\u0153api_build_tool\u0153,\u0153output_types\u0153:[\u0153StructuredTool\u0153]}-Agent-eWsck{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-eWsck\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153,\u0153BaseTool\u0153,\u0153StructuredTool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "animated": false,
         "className": "",
         "selected": false
       },
       {
         "source": "AstraDBToolComponent-bh6bG",
-        "sourceHandle": "{œdataTypeœ:œAstraDBToolComponentœ,œidœ:œAstraDBToolComponent-bh6bGœ,œnameœ:œapi_build_toolœ,œoutput_typesœ:[œStructuredToolœ]}",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153AstraDBToolComponent\u0153,\u0153id\u0153:\u0153AstraDBToolComponent-bh6bG\u0153,\u0153name\u0153:\u0153api_build_tool\u0153,\u0153output_types\u0153:[\u0153StructuredTool\u0153]}",
         "target": "Agent-niM4e",
-        "targetHandle": "{œfieldNameœ:œtoolsœ,œidœ:œAgent-niM4eœ,œinputTypesœ:[œToolœ,œBaseToolœ,œStructuredToolœ],œtypeœ:œotherœ}",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-niM4e\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153,\u0153BaseTool\u0153,\u0153StructuredTool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "data": {
           "targetHandle": {
             "fieldName": "tools",
@@ -5318,7 +5318,7 @@
             ]
           }
         },
-        "id": "reactflow__edge-AstraDBToolComponent-bh6bG{œdataTypeœ:œAstraDBToolComponentœ,œidœ:œAstraDBToolComponent-bh6bGœ,œnameœ:œapi_build_toolœ,œoutput_typesœ:[œStructuredToolœ]}-Agent-niM4e{œfieldNameœ:œtoolsœ,œidœ:œAgent-niM4eœ,œinputTypesœ:[œToolœ,œBaseToolœ,œStructuredToolœ],œtypeœ:œotherœ}",
+        "id": "reactflow__edge-AstraDBToolComponent-bh6bG{\u0153dataType\u0153:\u0153AstraDBToolComponent\u0153,\u0153id\u0153:\u0153AstraDBToolComponent-bh6bG\u0153,\u0153name\u0153:\u0153api_build_tool\u0153,\u0153output_types\u0153:[\u0153StructuredTool\u0153]}-Agent-niM4e{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-niM4e\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153,\u0153BaseTool\u0153,\u0153StructuredTool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "animated": false,
         "className": "",
         "selected": false
