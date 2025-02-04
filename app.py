@@ -132,13 +132,9 @@ def answer_faq(query: str, **kwargs) -> str:
             "• Oranje: nog te betalen (maar vervaldatum niet verstreken)\n"
             "• Rood: vervaldatum overschreden."
         )
-    # Default antwoord
+    # Default antwoord (geen specifiek antwoord gevonden)
     else:
-        return (
-            "Geen antwoord gevonden op je vraag? Kies één van de contactmogelijkheden:\n"
-            "• Chat (beschikbaar zodra een medewerker beschikbaar is)\n"
-            "• Bel ons tijdens de openingsuren (Ma.-vr.: 08u00 - 18u00)"
-        )
+        return ""  # We geven een lege string terug zodat we later een fallback kunnen tonen.
 
 faq_agent = Agent.create_agent(name="FAQAgent", occupation="FAQ Specialist")
 faq_agent.add_action(
@@ -148,6 +144,14 @@ faq_agent.add_action(
         parameters=["query"],
         function=answer_faq,
     )
+)
+
+# -----------------------------------------------------
+# Algemene fallback-tekst
+fallback_message = (
+    "Ik kan hier niet op antwoorden. Ik zal u doorverbinden met onze klantendienst. \n\n"
+    "Voor meer informatie kan je terecht bij onze klantendienst op het nummer 078 155 230 of per e-mail: "
+    "business.services@luminus.be."
 )
 
 # -----------------------------------------------------
@@ -164,7 +168,6 @@ if "username" not in st.session_state:
         if username_input.strip():
             st.session_state["username"] = username_input.strip()
             st.success(f"Welkom, {st.session_state['username']}!")
-            # Controleer of experimental_rerun beschikbaar is
             if hasattr(st, "experimental_rerun"):
                 st.experimental_rerun()
         else:
@@ -174,58 +177,63 @@ else:
     username = st.session_state["username"]
     st.sidebar.write(f"**Ingelogd als:** {username}")
 
-st.header("Stel je vraag over energie, facturatie of besparing")
-customer_query = st.text_area("Typ hier je vraag:")
+st.header("Stel je vragen over energie, facturatie of besparing")
 
-if st.button("Verzend vraag"):
-    if not customer_query.strip():
-        st.error("Voer alstublieft een geldige vraag in.")
-    elif contains_profanity(customer_query):
-        st.error("Helaas, uw taalgebruik is niet toegestaan.")
-    else:
-        # Indien de vraag lijkt te vallen onder de FAQ (op basis van sleutelwoorden), roep dan FAQAgent aan
-        if is_faq_query(customer_query):
-            faq_response = faq_agent.execute_action("ANSWER_FAQ", customer_query)
-            st.markdown("### Antwoord:")
-            st.write(faq_response)
+# Vraag eerst op hoeveel vragen de gebruiker wil stellen
+num_questions = st.number_input("Hoeveel vragen wilt u stellen?", min_value=1, max_value=10, value=1, step=1)
+
+# Maak voor elke vraag een aparte text_input aan
+questions = []
+for i in range(num_questions):
+    vraag = st.text_input(f"Vraag {i+1}:", key=f"question_{i}")
+    questions.append(vraag)
+
+if st.button("Verzend vragen"):
+    for idx, question in enumerate(questions):
+        st.markdown(f"---\n### Vraag {idx+1}:")
+        # Controleer of er een geldige vraag is ingevoerd
+        if not question.strip():
+            st.error("Voer alstublieft een geldige vraag in.")
+            continue
+        # Controleer op profaniteit
+        if contains_profanity(question):
+            st.error("Helaas, uw taalgebruik is niet toegestaan.")
+            continue
+        
+        # Verwerk de vraag via de FAQ-agent of de multi-agent conversatiestroom
+        if is_faq_query(question):
+            answer = faq_agent.execute_action("ANSWER_FAQ", question)
         else:
-            # Anders: Voer de multi-agent conversatiestroom uit (Billing, Usage, Advice)
-            # Stap 1: BillingAgent ontvangt de vraag en stuurt deze door naar UsageAgent
-            billing_agent.talk_to(usage_agent, customer_query)
-
-            # Stap 2: UsageAgent geeft inzicht in het gebruik (bijvoorbeeld over grafiekweergave)
-            usage_response = usage_agent.execute_action("EXPLAIN_USAGE", customer_query)
+            # Multi-agent conversatiestroom:
+            billing_agent.talk_to(usage_agent, question)
+            usage_response = usage_agent.execute_action("EXPLAIN_USAGE", question)
             usage_agent.talk_to(billing_agent, usage_response)
-
-            # Stap 3: BillingAgent verwerkt de vraag verder en geeft een facturatie-/voorschot-antwoord
-            billing_response = billing_agent.execute_action("PROVIDE_BILLING_EXPLANATION", customer_query)
-
-            # Stap 4: BillingAgent vraagt tevens energieadvies op bij AdviceAgent
+            billing_response = billing_agent.execute_action("PROVIDE_BILLING_EXPLANATION", question)
             billing_agent.talk_to(advice_agent, "Kun je energieadvies geven aan deze klant?")
             advice_response = advice_agent.execute_action("PROVIDE_ENERGY_ADVICE", "Hoe kan ik energie besparen?")
             advice_agent.talk_to(billing_agent, advice_response)
+            
+            # Combineer de antwoorden van de verschillende agents
+            answer = (
+                f"**BillingAgent zegt:**\n{billing_response}\n\n"
+                f"**UsageAgent zegt:**\n{usage_response}\n\n"
+                f"**AdviceAgent zegt:**\n{advice_response}"
+            )
+        
+        # Als er geen antwoord (of een default lege string) is, toon dan het fallback-bericht.
+        if not answer.strip():
+            answer = fallback_message
+        
+        st.markdown("**Antwoord:**")
+        st.write(answer)
 
-            # Weergeven van de antwoorden van de verschillende agents
-            st.markdown("### Antwoorden van onze experts:")
-            st.markdown("**BillingAgent zegt:**")
-            st.write(billing_response)
-
-            st.markdown("**UsageAgent zegt:**")
-            st.write(usage_response)
-
-            st.markdown("**AdviceAgent zegt:**")
-            st.write(advice_response)
-
-        # (Optioneel) Toon conversatielogs van de agents
-        with st.expander("Toon conversatielogs"):
-            st.markdown("**BillingAgent Interacties:**")
-            st.text(billing_agent.get_interactions())
-
-            st.markdown("**UsageAgent Interacties:**")
-            st.text(usage_agent.get_interactions())
-
-            st.markdown("**AdviceAgent Interacties:**")
-            st.text(advice_agent.get_interactions())
-
-            st.markdown("**FAQAgent Interacties:**")
-            st.text(faq_agent.get_interactions())
+    # (Optioneel) Toon de conversatielogs van de agents
+    with st.expander("Toon conversatielogs"):
+        st.markdown("**BillingAgent Interacties:**")
+        st.text(billing_agent.get_interactions())
+        st.markdown("**UsageAgent Interacties:**")
+        st.text(usage_agent.get_interactions())
+        st.markdown("**AdviceAgent Interacties:**")
+        st.text(advice_agent.get_interactions())
+        st.markdown("**FAQAgent Interacties:**")
+        st.text(faq_agent.get_interactions())
