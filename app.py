@@ -134,7 +134,7 @@ def answer_faq(query: str, **kwargs) -> str:
         )
     # Default antwoord (geen specifiek antwoord gevonden)
     else:
-        return ""  # We geven een lege string terug zodat we later een fallback kunnen tonen.
+        return ""  # Lege string; de fallback wordt later gebruikt.
 
 faq_agent = Agent.create_agent(name="FAQAgent", occupation="FAQ Specialist")
 faq_agent.add_action(
@@ -214,13 +214,16 @@ if st.button("Verzend vragen"):
             advice_agent.talk_to(billing_agent, advice_response)
             
             # Combineer de antwoorden van de verschillende agents
-            answer = (
-                f"**BillingAgent zegt:**\n{billing_response}\n\n"
-                f"**UsageAgent zegt:**\n{usage_response}\n\n"
-                f"**AdviceAgent zegt:**\n{advice_response}"
-            )
+            answer = {
+                "BillingAgent": billing_response,
+                "UsageAgent": usage_response,
+                "AdviceAgent": advice_response
+            }
         
-        # Als er geen antwoord (of een default lege string) is, toon dan het fallback-bericht.
+        # Als 'answer' een dict is, probeer dan een samengevoegde string te maken
+        if isinstance(answer, dict):
+            answer = "\n\n".join(f"**{agent} zegt:**\n{response}" for agent, response in answer.items())
+        # Controleer of het antwoord (als string) leeg is; zo ja, gebruik dan de fallback-message.
         if not answer.strip():
             answer = fallback_message
         
