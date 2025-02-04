@@ -228,4 +228,8 @@ if st.button("Verzend vraag"):
             st.text(advice_agent.get_interactions())
 
             st.markdown("**FAQAgent Interacties:**")
+<<<<<<< HEAD
             st.text(faq_agent.get_interactions())
+=======
+            st.text(faq_agent.get_interactions())
+>>>>>>> origin/main
