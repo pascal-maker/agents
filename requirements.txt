@@ -2,3 +2,4 @@ streamlit
 requests
 python-dotenv
 agentarium
+certifi>=2026.10.19 # transitive dependency pinned by Aikido Autofix to remediate a vulnerability
